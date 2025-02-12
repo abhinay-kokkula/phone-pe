@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="outer">
+        <form id="myform">
+            <input type="text" id="name" name="name" placeholder="Name" autocomplete="off"><br>
+            <input type="text" id="number" name="number" placeholder="Amount" autocomplete="off"><br>
+            <button type="submit" id="submitbutton">Submit</button>
+        </form>
+        <div class="inner" id="inner" style="display: none;">
+            <div id="result">
+                <div class="radius">
+                    <i class='bx bxs-check-circle' id="checkbox" ></i>
+                </div>
+                <p id="displayamount"></p>
+                <p id="displayname"></p>
+                <p id="success"></p>
+                <audio id="myaudio">
+                    <source src="sucess.mp3" type="audio/mp3">
+                </audio>
+                <div class="buttons">
+                    <p id="viewdetails"></p>
+                    <p id="checkbalances"></p>
+                </div>
+            </div>
+            <div id="history">
+                <p id="historybtn"></p>
+            </div>
+        </div>
+        
+        <div class="historydetails" id="historydetails" style="display: none;">
+            <div class="container">
+                <div class="header">
+                    <div class="header-left">
+                        <img src="Screenshot 2024-09-10 203841.png" alt="Logo">
+                        <h4>Add address <span class="da">v</span><br><span class="headerin">Hyderabad</span></h3>
+                    </div>
+
+                    <div class="header-right">
+                        <img src="notify-removebg-preview (1).png" class="noti" alt="no">
+                        <img src="helpeimg-removebg-preview.png" class="help" alt="no">
+                    </div>
+                </div>
+                <div class="searchbar">
+                    <img src="search-removebg-preview (1).png" class="searchimg">
+                    <input type="text" class="search-bar" placeholder="Search by name, number or UPI ID">
+                    <div class="statements">
+                        <p class="statement" id="d">Download statement</p>
+                        <p class="statement" id="f">Filters -</p>
+                    </div>
+                </div>
+                <div class="transaction-list">
+                    <div class="transaction">
+                        <span class="paidto">Paid to</span>
+                        <div class="name">
+                            <span id="ka" class="ka" >KA</span>
+                            <div class="nam">
+                                <span id="hname">Kavitha aunty</span>
+                                <span id="hamount">₹5,500</span>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <span id="date-time"></span>
+                            <div class="ll">
+                                <span class="debt"> Debited from</span>
+                                <img src="unionbanklogo.png" class="bl">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="transaction">
+                        <span class="paidto">Paid to</span>
+                        <div class="name">
+                            <span class="ka">PA</span>
+                            <div class="nam">
+                                <span>Pranay Are</span>
+                                <span>₹200</span>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <span id="date-time"></span>
+                            <div class="ll">
+                                <span class="debt"> Debited from</span>
+                                <img src="unionbanklogo.png" class="bl">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="transaction">
+                        <span class="paidto">Paid to</span>
+                        <div class="name">
+                            <span class="ka">AK</span>
+                            <div class="nam">
+                                <span>Abhinay kokkula</span>
+                                <span>₹500</span>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <span id="date-time"></span>
+                            <div class="ll">
+                                <span class="debt"> Debited from</span>
+                                <img src="unionbanklogo.png" class="bl">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="transaction">
+                        <span class="paidto">Paid to</span>
+                        <div class="name">
+                            <span class="ka">SD</span>
+                            <div class="nam">
+                                <span>Siddhu</span>
+                                <span>₹120</span>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <span id="date-time"></span>
+                            <div class="ll">
+                                <span class="debt"> Debited from</span>
+                                <img src="unionbanklogo.png" class="bl">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="footer">
+                    <div class="last">
+                        <i class='bx bx-home-alt-2' id="home"></i>
+                            <a href="#" id="hom">Home</a>
+                    </div>
+                    <i class='bx bx-qr-scan' id="qrbtn"></i>
+                    <div class="last">
+                        <i class='bx bx-transfer' id="his"></i>
+                            <a href="#" id="his">History</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
